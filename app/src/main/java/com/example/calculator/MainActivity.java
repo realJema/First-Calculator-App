@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         Button _7 = (Button) findViewById(R.id.buttonSeven);
         Button _8 = (Button) findViewById(R.id.buttonEight);
         Button _9 = (Button) findViewById(R.id.buttonNine);
+        Button _Dot = (Button) findViewById(R.id.buttonDot);
 
         Button _Add = (Button) findViewById(R.id.buttonAdd);
         Button _Subtract = (Button) findViewById(R.id.buttonSubtract);
@@ -129,6 +130,13 @@ public class MainActivity extends AppCompatActivity {
                 screen.setText(screen.getText() + "9");
             }
         });
+        _Dot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // handle the code here
+                screen.setText(screen.getText() + ".");
+            }
+        });
 
 
 
@@ -139,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                 // handle the code here
                 computeCalculation();
                 CURRENT_ACTION = ADDITION;
-                info.setText(decimalFormat.format(valueOne) + "+");
+                info.setText(decimalFormat.format(valueOne) + " + ");
                 screen.setText(null);
             }
         });
@@ -149,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 // handle the code here
                 computeCalculation();
                 CURRENT_ACTION = MULTIPLICATION;
-                info.setText(decimalFormat.format(valueOne) + "*");
+                info.setText(decimalFormat.format(valueOne) + " * ");
                 screen.setText(null);
             }
         });
@@ -159,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 // handle the code here
                 computeCalculation();
                 CURRENT_ACTION = SUBTRACTION;
-                info.setText(decimalFormat.format(valueOne) + "-");
+                info.setText(decimalFormat.format(valueOne) + " - ");
                 screen.setText(null);
             }
         });
@@ -169,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 // handle the code here
                 computeCalculation();
                 CURRENT_ACTION = DIVISION;
-                info.setText(decimalFormat.format(valueOne) + "/");
+                info.setText(decimalFormat.format(valueOne) + " / ");
                 screen.setText(null);
             }
         });
@@ -179,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 // handle the code here
                 computeCalculation();
                 CURRENT_ACTION = ADDITION;
-                info.setText(decimalFormat.format(valueOne) + "+");
+                info.setText(decimalFormat.format(valueOne) + " + ");
                 screen.setText(null);
             }
         });
